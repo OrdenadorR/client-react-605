@@ -5,7 +5,7 @@ import Cabecera from './components/Cabecera';
 import Menu from './components/Menu';
 import Pie from './components/Pie';
 import Inicio from './pages/Inicio';
-import InsertarDisco from './pages/InsertarDisco';
+import AddDiscForm from './pages/InsertarDisco';
 import ListarDisco from './pages/ListarDisco';
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         <main>
           <Routes>
             <Route path="/" element={<Inicio />} />
-            <Route path="/insertar" element={<InsertarDisco />} />
+            <Route path="/insertar" element={<AddDiscForm />} />
             <Route path="/listar" element={<ListarDisco />} />
           </Routes>
         </main>

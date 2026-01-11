@@ -1,9 +1,8 @@
 import { useContext, useRef } from "react";
 import { DiscoContext } from "../context/DiscosProvider.jsx";
-import { saveDiscoToAPI } from "../libraries/apiRequests.js";
 
-const InsertarDisco = () => {
-  const { discos, setDiscos } = useContext(DiscoContext);
+const AddDiscForm = () => {
+  const { addDisco } = useContext(DiscoContext);
   const formRef = useRef();
 
   const handleSubmit = async (e) => {
@@ -21,8 +20,7 @@ const InsertarDisco = () => {
     };
 
     try {
-      const saved = await saveDiscoToAPI(newDisco);
-      setDiscos([...discos, saved]);
+      await addDisco(newDisco);
       form.reset();
     } catch (error) {
       throw error;
@@ -56,4 +54,4 @@ const InsertarDisco = () => {
   );
 };
 
-export default InsertarDisco;
+export default AddDiscForm;
