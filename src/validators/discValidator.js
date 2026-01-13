@@ -1,6 +1,6 @@
 'use strict';
 
-export const validateDisc = (disc) => {
+export const getDiscErrors = (disc) => {
   let errors = [];
 
   if (!disc.name || !disc.name.trim()) {
